@@ -1,13 +1,11 @@
 package id.co.riyan.challenge4
 
 import android.media.Image
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import androidx.annotation.RequiresApi
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,44 +43,38 @@ class MainActivity : AppCompatActivity() {
 
         iconbatu.setOnClickListener {
             Log.d(MainActivity::class.java.simpleName, "batu terpilih")
-            selectViewPertama(iconbatu, pilihan = 0)
+            iconterpilih1 = 0
 
         }
 
         iconkertas.setOnClickListener {
             Log.d(MainActivity::class.java.simpleName, "kertas terpilih")
-            selectViewPertama(iconkertas, pilihan = 1)
+            iconterpilih1 = 1
 
         }
 
         icongunting.setOnClickListener {
             Log.d(MainActivity::class.java.simpleName, "gunting terpilih")
-            selectViewPertama(icongunting, pilihan = 2)
+            iconterpilih1 = 2
 
         }
 
         iconbatu2.setOnClickListener {
             Log.d(MainActivity::class.java.simpleName, "batu2 terpilih")
-            selectViewKedua(iconbatu2, pilihan = 0)
+            iconterpilih2 = 0
 
         }
 
         iconkertas2.setOnClickListener {
             Log.d(MainActivity::class.java.simpleName, "kertas2 terpilih")
-            selectViewKedua(iconkertas2, pilihan = 1)
+            iconterpilih2 = 1
 
         }
 
         icongunting2.setOnClickListener {
             Log.d(MainActivity::class.java.simpleName, "gunting2 terpilih")
-            selectViewKedua(icongunting2, pilihan = 2)
+            iconterpilih2 = 2
 
-        }
-
-        reset.setOnClickListener {
-            clearVIewPertama()
-            clearVIewKedua()
-            pemenang.setBackgroundResource(R.drawable.ic_vs)
         }
     }
 
@@ -111,14 +103,12 @@ class MainActivity : AppCompatActivity() {
         iconkertas2.setImageResource(0)
     }
 
-    private fun hasil() {
-        if(iconterpilih1 >=-1 && iconterpilih2 >=-1){
+    private fun hasil(){
+        if(iconterpilih1 >=0 && iconterpilih2 >=0){
             if(iconterpilih1 == batu && iconterpilih2 == kertas || iconterpilih1 == kertas && iconterpilih2 == gunting || iconterpilih1 == gunting && iconterpilih2 == batu){
                 pemenang.setBackgroundResource(R.drawable.ic_pemain2);
             }else if(iconterpilih1 == batu && iconterpilih2 == gunting || iconterpilih1 == kertas && iconterpilih2 == batu || iconterpilih1 == gunting && iconterpilih2 == kertas){
                 pemenang.setBackgroundResource(R.drawable.ic_pemain1);
-            }else if(iconterpilih1 == batu && iconterpilih2 == batu || iconterpilih1 == kertas && iconterpilih2 == kertas || iconterpilih1 == gunting && iconterpilih2 == gunting){
-                pemenang.setBackgroundResource(R.drawable.ic_draw);
             }
         }
     }
