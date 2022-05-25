@@ -134,16 +134,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <TextView
+    <ImageView
         android:id="@+id/view_result"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="#FFE500"
+        android:src="@drawable/ic_vs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/view_kertas2" />
 
     <ImageView
+        android:id="@+id/view_reset"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginEnd="4dp"
