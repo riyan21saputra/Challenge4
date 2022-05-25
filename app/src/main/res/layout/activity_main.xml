@@ -66,7 +66,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/ic_batu"
+        android:background="@drawable/ic_batu"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -76,7 +76,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="168dp"
-        android:src="@drawable/ic_kertas"
+        android:background="@drawable/ic_kertas"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -86,7 +86,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="304dp"
-        android:src="@drawable/ic_gunting"
+        android:background="@drawable/ic_gunting"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -105,7 +105,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="28dp"
-        android:src="@drawable/ic_batu"
+        android:background="@drawable/ic_batu"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.99"
@@ -118,7 +118,7 @@
         android:layout_height="80dp"
         android:layout_marginStart="328dp"
         android:layout_marginTop="168dp"
-        android:src="@drawable/ic_kertas"
+        android:background="@drawable/ic_kertas"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -129,21 +129,22 @@
         android:layout_height="80dp"
         android:layout_marginStart="328dp"
         android:layout_marginTop="304dp"
-        android:src="@drawable/ic_gunting"
+        android:background="@drawable/ic_gunting"
         android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <TextView
+    <ImageView
         android:id="@+id/view_result"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:background="#FFE500"
+        android:background="@drawable/ic_vs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/view_kertas2" />
 
     <ImageView
+        android:id="@+id/view_reset"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginEnd="4dp"
