@@ -78,6 +78,12 @@ class MainActivity : AppCompatActivity() {
             selectViewKedua(icongunting2, pilihan = 2)
 
         }
+
+        reset.setOnClickListener {
+            clearVIewPertama()
+            clearVIewKedua()
+            pemenang.setBackgroundResource(R.drawable.ic_vs)
+        }
     }
 
     private fun selectViewPertama(view: ImageView, pilihan: Int){
@@ -105,8 +111,8 @@ class MainActivity : AppCompatActivity() {
         iconkertas2.setImageResource(0)
     }
 
-    private fun hasil(){
-        if(iconterpilih1 >=0 && iconterpilih2 >=0){
+    private fun hasil() {
+        if(iconterpilih1 >=-1 && iconterpilih2 >=-1){
             if(iconterpilih1 == batu && iconterpilih2 == kertas || iconterpilih1 == kertas && iconterpilih2 == gunting || iconterpilih1 == gunting && iconterpilih2 == batu){
                 pemenang.setBackgroundResource(R.drawable.ic_pemain2);
             }else if(iconterpilih1 == batu && iconterpilih2 == gunting || iconterpilih1 == kertas && iconterpilih2 == batu || iconterpilih1 == gunting && iconterpilih2 == kertas){
